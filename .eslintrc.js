@@ -16,9 +16,6 @@ module.exports = {
     plugins: [
         '@typescript-eslint'
     ],
-    rules: {
-        '@typescript-eslint/indent': ['warn', 4, { SwitchCase: 1 }],
-    },
     overrides: [
         {
             files: ['*.test.ts'],
