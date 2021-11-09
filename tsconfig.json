@@ -107,8 +107,7 @@
     /* Skip type checking all .d.ts files. */
   },
   "include": [
-    "src",
-    "test"
+    "src"
   ],
   "exclude": [
     "node_modules"
