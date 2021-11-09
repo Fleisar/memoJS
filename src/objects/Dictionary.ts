@@ -1,3 +1,3 @@
 export interface Dictionary<TValue> {
-  [id: string]: TValue;
+    [id: string]: TValue;
 }
