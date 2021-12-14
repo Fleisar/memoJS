@@ -7,6 +7,7 @@
   },
   "scripts": {
     "build": "tsc -p ./tsconfig.json",
+    "build:prod": "tsc -p ./tsconfig.prod.json",
     "run": "node --trace-warnings ./dist/index.js",
     "start": "npm run build&&npm run run",
     "test": "jest --coverage"

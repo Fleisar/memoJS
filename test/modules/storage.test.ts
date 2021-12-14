@@ -12,14 +12,11 @@ describe('Storage', () => {
                 });
         });
         test('#2 file is not exists', () => {
-            let r = null;
-            try {
-                Storage.getFileInfo(TestDir + '/test');
-            } catch (e) {
-                r = e;
-            }
-            expect(r)
-                .toBeInstanceOf(Error);
+            return Storage.getFileInfo(TestDir + '/test').then(()=>{
+                expect(false).toBeTruthy();
+            }, () => {
+                expect(true).toBeTruthy();
+            });
         });
     });
     describe('getFileStream', () => {

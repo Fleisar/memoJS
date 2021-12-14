@@ -54,7 +54,7 @@ app.get('/file/*', async (req, res) => {
                 if (range.end - range.start > config.sizeLimit) {
                     range.end = range.start + config.sizeLimit - 1;
                 }
-                if (range.end > fileInfo.size) {
+                if (range.end >= fileInfo.size) {
                     range.end = fileInfo.size - 1;
                 }
                 Storage.getFileStream(path, range).then((stream) => {
